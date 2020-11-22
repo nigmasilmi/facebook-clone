@@ -1,7 +1,10 @@
 .app{
     margin: 0;
+    background: #f1f2f5;
+    height: 100vh;
 }
 
 .app__body{
-    margin: 0;
+    display: flex;
+
 }

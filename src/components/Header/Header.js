@@ -25,19 +25,19 @@ const Header = (props) => {
 
             <div className="header__center">
                 <div className="header__option header__option--active">
-                    <HomeIcon fontsSize="large" />
+                    <HomeIcon fontSize="large" />
                 </div>
                 <div className="header__option">
-                    <FlagIcon fontsSize="large" />
+                    <FlagIcon fontSize="large" />
                 </div>
                 <div className="header__option">
-                    <SubscriptionsIcon fontsSize="large" />
+                    <SubscriptionsIcon fontSize="large" />
                 </div>
                 <div className="header__option">
-                    <StorefrontIcon fontsSize="large" />
+                    <StorefrontIcon fontSize="large" />
                 </div>
                 <div className="header__option">
-                    <SupervisedUserCircleIcon fontsSize="large" />
+                    <SupervisedUserCircleIcon fontSize="large" />
                 </div>
             </div>
 

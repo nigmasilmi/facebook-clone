@@ -26,19 +26,19 @@
     background-color: #eff2f5 ;
     text-align: center;
 }
+
 .messageSender__top>form>button{
     display: none;
 }
+
 .messageSender_input{
     flex: 1;
 }
-
 
 .messageSender__bottom{
     display: flex;
     justify-content: space-between;
     padding:5px;
-
 }
 
 .messageSender__option{

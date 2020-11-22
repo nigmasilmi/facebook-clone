@@ -19,12 +19,12 @@ const Header = (props) => {
                 <img src="https://res.cloudinary.com/dz3gm9c3w/image/upload/v1605997942/facebook-clone/Color/PNG/f_logo_RGB-Blue_100_a01j34.png" alt="facebook logo" />
                 <div className="header__input">
                     <SearchIcon />
-                    <input type="text" />
+                    <input placeholder="search in fb clone" type="text" />
                 </div>
             </div>
 
             <div className="header__center">
-                <div className="header__option">
+                <div className="header__option header__option--active">
                     <HomeIcon fontsSize="large" />
                 </div>
                 <div className="header__option">

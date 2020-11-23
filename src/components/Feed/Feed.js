@@ -1,28 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Feed.css';
 import StoryReel from './StoryReel/StoryReel';
 import MessageSender from '../MessageSender/MessageSender';
 import Post from '../Post/Post';
+// import { useStateValue } from '../../Context/StateProvider';
+import db from '../../firebase';
+
 
 const Feed = (props) => {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        db.collection('posts')
+            .orderBy('timestamp', 'desc')
+            .onSnapshot((snapshot) => {
+                setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
+            })
+    });
+
+
     return (
         <div className="feed">
             <StoryReel />
             <MessageSender />
-            <Post
-                profilePic='https://res.cloudinary.com/dz3gm9c3w/image/upload/v1606064845/facebook-clone/freepik-avatar-07_urjnav.jpg'
-                username='Betty'
-                message='This works'
-                timestamp='this is a timestamp'
-                image='https://i2.wp.com/dianaurban.com/wp-content/uploads/2017/07/01-cat-stretching-feet.gif?resize=500%2C399&ssl=1'
-            />
-            <Post
-                profilePic='https://res.cloudinary.com/dz3gm9c3w/image/upload/v1606064845/facebook-clone/freepik-avatar-04_raqvra.jpg'
-                username='Anita'
-                message='This works'
-                timestamp='this is a timestamp'
-                image=''
-            />
+            {posts.map(post => (
+                <Post
+                    key={post.id}
+                    profilePic={post.data.profilePic}
+                    message={post.data.message}
+                    timestamp={post.data.timestamp}
+                    username={post.data.username}
+                    image={post.data.image}
+                />
+            ))}
         </div>
     )
 }

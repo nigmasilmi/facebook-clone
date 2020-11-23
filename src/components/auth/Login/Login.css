@@ -1,0 +1,43 @@
+.login{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.login>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.login > div > img{
+    object-fit: contain;
+    height: 150px;
+}
+
+.login > button{
+    width: 300px;
+    background-color: #2e81f4;
+    color: #eff2f5;
+    font-weight: 800;
+}
+
+.login > button:hover{
+    background-color: white;
+    color: #2e81f4;
+}
+
+.login__disclaimer{
+    text-align: right;
+    margin-right:1rem;
+    margin-top:-3.5rem;
+    object-fit:contain;
+}
+
+.login__disclaimer > h5{
+    width:13rem;
+    font-weight: lighter;
+    font-size: small;
+    text-align: right;
+}
+

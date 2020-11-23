@@ -12,7 +12,7 @@ const Widgets = () => {
                 style={{ border: 'none', overflow: 'hidden' }}
                 scrolling="no"
                 frameBorder="0"
-                allowTransparency={true}
+                allowtransparency="true"
                 allowFullScreen="true"
             // allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             >

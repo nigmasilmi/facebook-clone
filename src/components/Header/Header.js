@@ -1,5 +1,8 @@
 import React from 'react';
 import './Header.css';
+import { useStateValue } from '../../Context/StateProvider';
+// // //
+import { Avatar, IconButton } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
 import FlagIcon from '@material-ui/icons/Flag';
@@ -8,11 +11,15 @@ import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Avatar, IconButton } from '@material-ui/core';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 
+
 const Header = (props) => {
+    // user.displayName
+    //user.email
+    // user.photoURL
+    const [{ user }] = useStateValue();
     return (
         <div className="header">
             <div className="header__left">
@@ -43,8 +50,8 @@ const Header = (props) => {
 
             <div className="header__right">
                 <div className="header__info">
-                    <Avatar src="" />
-                    <h4>nigm4</h4>
+                    <Avatar src={user.photoURL} />
+                    <h4>{user.displayName}</h4>
                 </div>
                 <IconButton>
                     <AddIcon />

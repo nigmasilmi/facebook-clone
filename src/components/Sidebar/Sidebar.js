@@ -1,5 +1,6 @@
 import React from 'react';
 import './Sidebar.css';
+// // //
 import SidebarRow from './SidebarRow/SidebarRow';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import EmojiFlagsIcon from '@material-ui/icons/EmojiFlags';
@@ -9,11 +10,14 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 
+import { useStateValue } from '../../Context/StateProvider';
+
 function Sidebar(props) {
+    const [{ user }] = useStateValue();
 
     return (
         <div className="sidebar">
-            <SidebarRow src='https://avatars2.githubusercontent.com/u/28691710?s=460&u=4811d03d7a1d73b76eae9135b7b2d056f85524ca&v=4' title='nigm4' />
+            {/* <SidebarRow src={user.photoURL} title={user.displayName} /> */}
             <SidebarRow
                 Icon={LocalHospitalIcon}
                 title="COVID-19 Information Center"

@@ -8,7 +8,7 @@ const StoryReel = (props) => {
             <Story
                 image='https://res.cloudinary.com/dz3gm9c3w/image/upload/v1606063754/facebook-clone/storyMock3_bjquj2.png'
                 profileSrc='https://res.cloudinary.com/dz3gm9c3w/image/upload/v1606064845/facebook-clone/freepik-avatar-06_pl8rqe.jpg'
-                title='Red Beard Joe'
+                title='Red Joe'
             />
             <Story
                 image='https://res.cloudinary.com/dz3gm9c3w/image/upload/v1606063845/facebook-clone/1_nvxpjc.png'
